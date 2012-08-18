@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <h1>1. Textbox</h1>
+    <form action="#" method="post">
+      <input name="password1" id="password1" type="password" value="password">
+      <input type="checkbox" data-showpassword-field="#password1">
+    </form>
+    
+    <h1>2. Link with confirmation</h1>
+    <form action="#" method="post">
+      <input name="password2" id="password2" type="password" value="password"><br>
+      <a href="error" id="showPassword2" data-confirm="Are you sure?">show password</a>
+    </form>
+    
+    <script src="http://code.jquery.com/jquery-1.8.0.js"></script>
+    <script src="jquery.showpassword.js"></script>
+    <script>
+      $(function() {
+        // 1. Textbox
+        $("*[data-showpassword-field]").showPassword();
+        
+        // 2. Link
+        $("#showPassword2").showPassword({
+          field: "#password2",
+          before: function(event, trigger, pwdField, txtField) {
+            event.preventDefault();
+            return txtField.is(":visible") || confirm(trigger.attr('data-confirm'));
+          },
+          
+          after: function(event, trigger, pwdField, txtField) {
+            event.preventDefault();
+          }
+        })
+      });
+    </script>
+  </body>
+</html>
