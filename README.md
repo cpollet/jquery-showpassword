@@ -2,13 +2,13 @@
 
 A jQuery (> 1.3.0) plugin that allows users to trigger the transformation of a password field into a cleartext field and vice versa from a DOM event.
 
-_&copy; Copyright 2012 Christophe Pollet_
+_&copy; Copyright 2012 by Christophe Pollet_
 
 _Licensed under the MIT License (http://www.opensource.org/licenses/mit-license.php)_
 
 ##Demo
 
-See <a href="http://christophe.pollet.ch/projects/jquery-showpassword/src/example.html">Example</a>
+See <a href="http://christophe.pollet.ch/projects/jquery-showpassword/src/example.html">demo</a>
 
 ## Usage
 
